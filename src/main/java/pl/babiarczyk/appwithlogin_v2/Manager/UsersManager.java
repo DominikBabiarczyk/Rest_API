@@ -28,6 +28,7 @@ public class UsersManager {
 
     @EventListener(ApplicationReadyEvent.class)
     public void findDB(){
-    save(new Users("DDumel", "123", 1L));
+    save(new Users("DDumel", "123", 1L, ""));
+    save(new Users("Dominik", "123", 2L, ""));
     }
 }

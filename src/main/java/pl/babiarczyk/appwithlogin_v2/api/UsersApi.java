@@ -23,7 +23,7 @@ public class UsersApi {
     @GetMapping
     public Optional<Users> getUserById(@RequestParam Long id){return usersContainers.findById(id);}
 
-    @PostMapping
+    @PostMapping("/add")
     public Users addUser(@RequestBody Users users){
         return usersContainers.save(users);
     }

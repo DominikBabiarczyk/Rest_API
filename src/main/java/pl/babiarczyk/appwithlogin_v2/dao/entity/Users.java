@@ -10,16 +10,27 @@ public class Users {
     private String name;
     private String password;
 
+    private String invitation;
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
     public Users(){}
 
-    public Users(String name, String password, Long id){
+    public Users(String name, String password, Long id, String invitation){
         this.name = name;
         this.password = password;
         this.id = id;
+        this.invitation = invitation;
+    }
+
+    public String getInvitation() {
+        return invitation;
+    }
+
+    public void setInvitation(String invitation) {
+        this.invitation = invitation;
     }
 
     public String getName() {
